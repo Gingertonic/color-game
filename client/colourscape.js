@@ -4,18 +4,11 @@ class Colourscape {
         this.players = players;
     }
 
-    start(){
-        console.log('Starting game')
-    }
-
-    end(){
-        console.log('Ending game')
-    }
-
     updateColour(playerId, colour){
         const player = this.players.find( p => p.id === playerId  )
         player.updateColour(colour)
     }
+
 
     renderColourscape(){
         return (

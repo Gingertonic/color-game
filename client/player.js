@@ -1,7 +1,9 @@
 class Player {
-    constructor(id){
+    constructor(id, gameId){
+        console.log(gameId)
         this.id = id
         this.color = '#ff4040'
+        this.gameId = gameId
     }
 
     updateUsername(username){
@@ -20,6 +22,7 @@ class Player {
         this.playerDiv.style.margin = "2px"
         this.playerDiv.style.backgroundColor = this.color
         this.playerDiv.setAttribute("class", "player-color")
+        this.playerDiv.setAttribute("id", this.id)
         gameContainer.append(this.playerDiv)
     }
 
@@ -29,12 +32,10 @@ class Player {
 class LocalPlayer extends Player {
     updateColour(colour){
         this.updateColourChoice(colour)
-    }
-
-    leaveGame(){
-        socket.disconnect()
+        socket.emit('colour-change', { gameId: this.gameId, playerId: this.id, newColour: this.colour })
     }
 }
+
 
 class RemotePlayer extends Player {
     updateColour(colour){

@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RT Goodness</title>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
     <script src="colourscape.js"></script>
     <script src="player.js"></script>
     <script defer src="index.js"></script>
 </head>
 <body>
     <h1>Sound Crowd</h1>
+    
     <div id="games-container">
         <h2>Games</h2>
         <ul id="games-index"></ul>
@@ -19,10 +21,7 @@
         </form>
     </div>
   
-
-    <div id="current-game" style="display: flex">
-
-    </div>
+    <div id="current-game" style="display: flex"></div>
 
 </body>
 </html>
