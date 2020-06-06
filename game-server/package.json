@@ -1,0 +1,16 @@
+{
+  "name": "game-server",
+  "version": "1.0.0",
+  "description": "game server for colour sharing tool",
+  "main": "server.js",
+  "repository": "https://github.com/Gingertonic/color-game",
+  "author": "Gingertonic",
+  "license": "MIT",
+  "scripts": {
+      "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.4",
+    "socket.io": "^2.3.0"
+  }
+}
